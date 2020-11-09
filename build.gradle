@@ -20,11 +20,24 @@ repositories {
 }
 
 dependencies {
+	//thymeleaf
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//thymeleaf>dialect(html layout 설정)
+	implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	//lombox
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
+	
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	//db
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.2'
+    runtimeOnly 'mysql:mysql-connector-java'
+    
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'

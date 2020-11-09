@@ -1,0 +1,84 @@
+@charset "EUC-KR";
+
+/* 
+layout
+*/
+header{
+  background: lightblue;
+}
+.content{
+  background: lightcoral;
+}
+footer{
+  background: lightgoldenrodyellow;
+}
+/* //layout */
+
+/* 
+header
+*/
+.hd_layout{
+  width: 1000px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px 10px;
+}
+.hd_layout::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.hd_logo{
+  /* background: lightgoldenrodyellow; */
+  float: left;
+  width: 200px;
+  height: 70px;
+}
+.hd_ul{
+  /* background: lightcoral; */
+  float: right;
+  margin-top: 50px;
+}
+.hd_ul::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.hd_li{
+  float: left;
+}
+.hd_link{
+  display: inline-block;
+  margin: 0 5px;
+}
+.hd_link::after{
+  content: "|";
+  display: inline-block;
+  margin: 0 5px;
+}
+.hd_li:last-child .hd_link::after{
+  content: '';
+}
+.hd_link:hover{
+  color: slategray;
+}
+/* //header */
+
+/* 
+content
+*/
+.content{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* //content */
+
+/* 
+footer
+*/
+.ft_layout{
+  background: lightcoral;
+  width: 1000px;
+  margin: 0 auto;
+}
+/* //footer */

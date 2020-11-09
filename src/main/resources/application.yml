@@ -1,3 +1,22 @@
 #server
 server:
   port: 8089
+#spring
+spring:
+#database설정
+  datasource:
+    url: jdbc:mysql://localhost:3306/polarBear?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: icandoit
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#thymeleaf설정
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+#mybatis설정
+mybatis:
+  #type-aliases-package: kr.com.yourHelper # mybatis 매핑 type을 짧게 쓰기 위한 설정
+  mapper-locations: mapper/**/*.xml    #mybatis가 읽을 파일의 경로 설정
+  configuration:
+    map-underscore-to-camel-case: true #카멜기호 맵핑 디폴트값은 false
