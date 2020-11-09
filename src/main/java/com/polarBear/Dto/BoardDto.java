@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class BoardDto {
+public class BoardDto extends Pagination{
 	private String id;
 	private String userId;
 	private String loginId;

@@ -4,9 +4,40 @@
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
   layout:decorator="layouts/layout"
 >
+
   <div layout:fragment="contents">
-    <div style="border: 1px solid red">
-    	게시판 상세보기 페이지입니다.
-    </div>
+  	<div class="ct_layout">
+  	1.목록이동
+  	2.댓글
+  	3.views +1
+  	4.modifyDate
+	    <ul>
+	    	<li>
+	    		<span>글번호 :</span>
+	    		<span th:text="${detail.id}"></span>
+	    	</li>
+	    	<li>
+	    		<span>회원ID :</span>
+	    		<span th:text="${detail.loginId}"></span>
+	    	</li>
+	    	<li>
+	    		<span>제목 :</span>
+	    		<span th:text="${detail.title}"></span>
+	    	</li>
+	    	<li>
+	    		<span>내용 :</span>
+	    		<span th:text="${detail.content}"></span>
+	    	</li>
+	    	<li>
+	    		<span>조회수 :</span>
+	    		<span th:text="${detail.views}"></span>
+	    	</li>
+	    	<li>
+	    		<span>생성일시 :</span>
+	    		<span th:text="${detail.createDate}"></span>
+	    	</li>
+	    </ul>
+  	</div>
   </div>
+  
 </html>

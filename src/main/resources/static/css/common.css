@@ -67,7 +67,8 @@ header
 /* 
 content
 */
-.content{
+.ct_layout{
+	background: lightgoldenrodyellow;
   width: 1000px;
   margin: 0 auto;
 }

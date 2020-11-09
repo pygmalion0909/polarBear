@@ -14,9 +14,21 @@ public class BoardService {
 	@Autowired
 	BoardMapper boardMapper;
 	
-	//게시판 조회
-	public List<BoardDto> selectBoardList(){
-		return boardMapper.selectBoardList();
+	/**
+	 * @title 게시판 조회
+	 */
+	public List<BoardDto> selectBoardList(BoardDto boardDto){
+		//list count
+		boardDto.setTotalRow(boardMapper.selectBoardListCount());
+		
+		return boardMapper.selectBoardList(boardDto);
+	}
+	
+	/**
+	 * @title 게시판 상세
+	 */
+	public BoardDto selectBoardDetail(String id) {
+		return boardMapper.selectBoardDetail(id);
 	}
 	
 }
