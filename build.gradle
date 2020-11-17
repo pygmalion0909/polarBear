@@ -22,7 +22,7 @@ repositories {
 dependencies {
 	//thymeleaf
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	//thymeleaf>dialect(html layout 설정)
+	//thymeleaf>dialect(html layout �꽕�젙)
 	implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect')
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -42,6 +42,9 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 }
 
 test {
